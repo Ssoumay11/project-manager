@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #0f1117;
+  color: #e8eaf0;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 { font-family: "Syne", sans-serif; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1a1d27; }
+::-webkit-scrollbar-thumb { background: #4361ee; border-radius: 3px; }
+
+.card {
+  background: #1a1d27;
+  border: 1px solid rgba(67,97,238,0.12);
+  border-radius: 12px;
+}
+
+.btn-primary {
+  background: #4361ee;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: "Syne", sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-primary:hover { background: #3451d1; transform: translateY(-1px); }
+
+.btn-danger {
+  background: rgba(230,57,70,0.15);
+  color: #e63946;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid rgba(230,57,70,0.3);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-danger:hover { background: rgba(230,57,70,0.25); }
+
+.input {
+  background: #22263a;
+  border: 1px solid rgba(67,97,238,0.2);
+  border-radius: 8px;
+  color: #e8eaf0;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+.input:focus { outline: none; border-color: #4361ee; }
+
+select.input option { background: #22263a; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-todo { background: rgba(100,116,139,0.2); color: #94a3b8; }
+.badge-in_progress { background: rgba(67,97,238,0.15); color: #818cf8; }
+.badge-done { background: rgba(46,196,182,0.15); color: #2ec4b6; }
+.badge-low { background: rgba(46,196,182,0.1); color: #2ec4b6; }
+.badge-medium { background: rgba(255,159,28,0.1); color: #ff9f1c; }
+.badge-high { background: rgba(247,37,133,0.1); color: #f72585; }
+.badge-overdue { background: rgba(230,57,70,0.15); color: #e63946; }
+
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+.animate-in { animation: fadeIn 0.3s ease forwards; }
